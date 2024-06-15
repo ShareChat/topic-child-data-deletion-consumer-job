@@ -1,0 +1,15 @@
+## Misc. Files
+TODO.md
+
+## MacOS
+*.DS_Store
+
+## VS Code
+.vscode/
+
+## Intellij
+.idea/
+
+## Binary Artifacts
+lte-cohort-service
+__debug_bin
