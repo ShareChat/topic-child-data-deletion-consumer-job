@@ -240,7 +240,7 @@ func getIdsToDeleteTopicChatMember(ctx context.Context, client *spanner.Client, 
 		Params: map[string]interface{}{"topicId": topicId},
 	}
 
-	iter := client.Single().QueryWithOptions(ctx, stmt, spanner.QueryOptions{Priority: sppb.RequestOptions_PRIORITY_LOW})
+	iter := client.Single().QueryWithOptions(ctx, stmt, spanner.QueryOptions{Priority: sppb.RequestOptions_PRIORITY_LOW, RequestTag: "tag-getIdsToDeleteTopicChatMember"})
 	defer iter.Stop()
 
 	var ids []string
